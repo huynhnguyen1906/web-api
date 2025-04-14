@@ -20,7 +20,9 @@ INSERT INTO webapi_products (
     price, 
     topping, 
     description,
-    image
+    image,
+    calorie,
+    allergy
 ) VALUES (
     'ドミノデラックス',
     '{
@@ -38,5 +40,14 @@ INSERT INTO webapi_products (
         "マッシュルーム"
     ]',
     'ドミノデラックスは、ベバロニ、ベーコン、チーズ、トマト、オニオン、ピーマン、マッシュルームをトッピングしたピザです。',
-    "product01.jpg"
+    "product01.png",
+    250,
+    '[
+        "小麦",
+        "乳",
+        "卵",
+        "大豆",
+        "豚肉",
+        "鶏肉"
+    ]'
 );
