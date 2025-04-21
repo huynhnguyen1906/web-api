@@ -1,10 +1,13 @@
 <?php
+// require config
+require_once __DIR__ . '/../config.php';
 
 // DB connection
 
-$db = new PDO('mysql:host=localhost;dbname=ndhuynh', 'ndhuynh', 'eccMyAdmin');
+$db = new PDO(DB_DSN, DB_USERNAME, DB_PASS);
 
-$sql = "SELECT * FROM webapi_products";
+// SQL
+$sql = "SELECT * FROM " . DB_TABLE_PRODUCTS;
 $stmt = $db->prepare($sql);
 
 $stmt->execute();
