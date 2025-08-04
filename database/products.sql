@@ -1,11 +1,6 @@
-# --------------
-# 商品テーブル
-# --------------
 
-# テーブルの削除
 DROP TABLE IF EXISTS webapi_products;
 
-# テーブルの作成
 CREATE TABLE webapi_products(
 
     id          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, # ID
@@ -23,10 +18,8 @@ CREATE TABLE webapi_products(
 
 ) ENGINE = INNODB;
 
-# テーブルのオートインクリメントを初期化
 ALTER TABLE webapi_products AUTO_INCREMENT = 1;
 
-# テストデータ
 INSERT INTO webapi_products(
     name, price, topping, description, image, calorie, allergy
 )
